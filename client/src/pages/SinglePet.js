@@ -23,7 +23,7 @@ const SinglePet = () => {
 
     useEffect(()=>{
       const token=localStorage.getItem("token");
-      const url=`http://localhost:5000/pets/${id}`;
+      const url=`https://petlink.onrender.com/pets/${id}`;
       axios.get(url, {
         headers: { 'Authorization': `Bearer ${token}`,'Content-Type': 'application/json' }
     })

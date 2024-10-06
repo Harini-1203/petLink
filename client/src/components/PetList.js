@@ -15,7 +15,7 @@ useEffect(() => {
     if (!token) {
         console.log("No token found");
     }
-    axios.get('http://localhost:5000/pets', {
+    axios.get('https://petlink.onrender.com/pets', {
         headers: { 'Authorization': `Bearer ${token}`,'Content-Type': 'application/json' }
     })
     .then((res) => {

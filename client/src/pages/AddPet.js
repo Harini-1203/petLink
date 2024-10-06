@@ -39,7 +39,7 @@ const AddPet = () => {
       const token = JSON.parse(localStorage.getItem('token')); 
   
       const response = await axios.post(
-        'http://localhost:5000/pets',
+        'https://petlink.onrender.com/pets',
         formData, 
         {
           headers: {

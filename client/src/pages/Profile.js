@@ -28,7 +28,7 @@ const Profile = () => {
 
     try {
       const response = await axios.get(
-        'http://localhost:5000/users/current',
+        'https://petlink.onrender.com/users/current',
         {
           headers: {
             'Authorization': `Bearer ${token}`,
@@ -55,7 +55,7 @@ const Profile = () => {
 
 
   const upadteChanges=async ()=>{
-    const res = await axios.put('http://localhost:5000/users/update',
+    const res = await axios.put('https://petlink.onrender.com/users/update',
       {
         "oldUsername":username,
           newUsername,
@@ -75,7 +75,7 @@ const Profile = () => {
 
   const getPets = async () => {
     try {
-      const res = await axios.get(`http://localhost:5000/pets/user/${userid}`);
+      const res = await axios.get(`https://petlink.onrender.com/pets/user/${userid}`);
       console.log(res.data);
       if (res.data.length === 0) {
         setNoPets(true);

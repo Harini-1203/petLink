@@ -17,7 +17,7 @@ const Signin = (props) => {
         password: password,
       };
 
-      const response = await axios.post('http://localhost:5000/users/register', newUser);
+      const response = await axios.post('https://petlink.onrender.com/users/register', newUser);
       setErrorMsg("Now Click Login and Enter details");
       if (response.status === 201) {
         console.log('User signed up successfully:', response.data);
