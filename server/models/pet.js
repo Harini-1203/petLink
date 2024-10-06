@@ -1,10 +1,7 @@
 const mongoose=require("mongoose");
 
 const petSchema=new mongoose.Schema({
-    name: {
-        type: String,
-        required: true
-    },
+    user_id: { type: mongoose.Schema.Types.ObjectId, ref: 'User', required: true },
     age: {
         type: Number,
         required: true
@@ -15,13 +12,13 @@ const petSchema=new mongoose.Schema({
     },
     type: {
         type: String,
-        enum: ['Dog', 'Cat', 'Bird', 'Other'], 
+        // enum: ['Dog', 'Cat', 'Bird', 'Other'], 
         required: true
     },
     status: {
         type: String,
         enum: ['For Sale', 'For Adoption'],
-        required: true
+        //required: true
     },
     price: {
         type: Number,
@@ -37,12 +34,16 @@ const petSchema=new mongoose.Schema({
     },
     images: {
         type: [String],
-        required: true
     },
-    ownerId: {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'User',
-        // required: true
+    ownerphn: {
+    type: String,
+    required: true,
+    validate: {
+        validator: function(v) {
+            return /^\d{10}$/.test(v);  // Regular expression to ensure exactly 10 digits
+        },
+        message: props => `${props.value} is not a valid 10-digit phone number!`
+    }
     },
     createdAt: {
         type: Date,

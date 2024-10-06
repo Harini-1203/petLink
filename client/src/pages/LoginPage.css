@@ -1,0 +1,98 @@
+.LoginPage{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FEFAE0;
+}
+.container{
+    width: fit-content;
+}
+.login-img img{
+    width: 250px;
+}
+.login-img{
+    width: 250px;
+    width: fit-content;
+    position: absolute;
+    bottom: 0;
+}
+.signinPage , .loginPage{
+    background-color: var(--dark-brown);
+    width: fit-content;
+    color: white;
+    display: flex;
+    justify-content:space-between;
+    width: 50vw;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    border-radius: 50px;
+}
+
+form h1{
+    margin: 30px auto;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+    
+}
+form input{
+    font-size: 1.1rem;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    margin: 10px;
+    color: black;
+}
+form button,.loginPage-right button{
+    width: fit-content;
+    font-size: 1.2rem;
+    padding: 15px;
+    margin: 20px auto;
+    border: none;
+    background-color: #CBE2B5;
+    color: var(--dark-brown);
+    border-radius: 10px;
+}
+.loginPage-right button{
+    background-color: var(--dark-brown);
+    color: white;
+}
+
+.loginPage-right{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color:#CBE2B5;
+    padding: 50px;
+    width: 50%;
+    color: var(--dark-brown);
+}
+.error-msg{
+    font-size: 1rem;
+    color: #ffffff;
+    
+    width: fit-content;
+    padding: 5px;
+    text-align: center;
+    margin-left: 20px;
+}
+@media only screen and (max-width: 700px) {
+    .login-img{
+        bottom: -100px;
+    }
+    .container{
+        width: 80vw;
+    }
+    .loginPage-right{
+        border-radius: 10px;
+        width: 100%;
+    }
+    .signinPage , .loginPage{
+        width: fit-content;
+    }
+
+}
