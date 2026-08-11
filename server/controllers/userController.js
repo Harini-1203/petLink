@@ -40,12 +40,12 @@ const createNewUser= asyncHandler(async (req,res)=>{
 
 
 const loginUser=asyncHandler( async (req,res)=>{
-    const {username,password}=req.body;
-    if(!username || !password){
+    const {email,password}=req.body;
+    if(!email || !password){
         res.status(400);
         throw new Error("all fields are required");
     }
-    const user=await userModel.findOne({username});
+    const user=await userModel.findOne({email});
     //compare passwords
     if(user &&  await bcrypt.compare(password,user.password)){
         //provide accestoken
