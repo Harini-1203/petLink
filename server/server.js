@@ -6,7 +6,10 @@ const app=express();
 const cookieParser=require("cookie-parser");
 const cors = require('cors');
 app.use(cors({
-  origin: 'https://petlink-i64i.onrender.com' // Replace with your frontend URL
+  origin: [
+    "http://localhost:5173",
+    "https://petlink-i64i.onrender.com"
+  ]
 }));
 //database
 const mongoose=require("mongoose");
