@@ -8,7 +8,8 @@ const cors = require('cors');
 app.use(cors({
   origin: [
     "http://localhost:5173",
-    "https://petlink-i64i.onrender.com"
+    "https://petlink-i64i.onrender.com",
+    "https://pet-link-xi.vercel.app"
   ]
 }));
 //database
