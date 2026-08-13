@@ -52,7 +52,7 @@ app.post('/pets', upload.array('images'),validateToken, asyncHandler(async (req,
     }
 
     // Check if the price is provided only when status is 'For Sale'
-    if (status === 'For Sale' && !price) {
+    if (status === 'sale' && !price) {
       return res.status(400).json({ message: 'Price is required when the pet is for sale.' });
     }
 
@@ -79,7 +79,7 @@ app.post('/pets', upload.array('images'),validateToken, asyncHandler(async (req,
       breed,
       type,
       status,
-      price: status === 'For Sale' ? price : null,  // Price is only applicable for 'For Sale'
+      price: status === 'sale' ? price : null,  // Price is only applicable for 'For Sale'
       description,
       location,
       ownerphn,
