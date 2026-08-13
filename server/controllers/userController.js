@@ -103,9 +103,12 @@ const updateUser=asyncHandler( async (req,res)=>{
 const getCurrent = asyncHandler(async (req, res) => {
     // Return the decoded user info in the response
     res.status(200).json({
-        message: "User info",
-        user: req.user
-    });
+    user: {
+        username: req.user.user.username,
+        email: req.user.user.email,
+        id: req.user.user.id
+    }
+});
 });
 
 module.exports={
