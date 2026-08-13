@@ -2,8 +2,11 @@ const mongoose=require("mongoose");
 
 const petSchema=new mongoose.Schema({
     user_id: { type: mongoose.Schema.Types.ObjectId, ref: 'User', required: true },
+    name:{
+        type:String
+    },
     age: {
-        type: Number,
+        type: String,
         required: true
     },
     breed: {
@@ -17,7 +20,7 @@ const petSchema=new mongoose.Schema({
     },
     status: {
         type: String,
-        enum: ['For Sale', 'For Adoption'],
+        enum: ['sale', 'adoption'],
         //required: true
     },
     price: {
