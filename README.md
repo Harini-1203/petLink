@@ -19,43 +19,33 @@ PetLink/
 
 -   React 19
 -   Vite
--   React Router
 -   Tailwind CSS
--   Axios
--   React Hook Form
--   Framer Motion
--   React Hot Toast
--   React Icons
 
 ### Backend
 
 -   Node.js
 -   Express.js
 -   MongoDB
--   Mongoose
--   JWT
--   bcrypt
--   Multer
 -   Cloudinary
--   dotenv
 
-## Features
+## 📸 Screenshots
 
--   User registration and login
--   JWT-based authentication
--   Protected routes
--   User profile management
--   Add pet listings
--   Browse pet listings
--   View individual pet details
--   Pet adoption listings
--   Pet sale listings
--   Image uploads through Cloudinary
--   Manage personal pet listings
--   Delete pet listings
--   Responsive user interface
--   Loading, empty, and error states
--   Toast notifications and animated interactions
+### Home Page
+
+![PetLink Home Page](./screenshots/home.png)
+
+### Home page
+
+![Pet Details](./screenshots/landing.png)
+
+### Pet Listings
+
+![Pet Listings](./screenshots/pets.png)
+
+
+
+
+
 
 ## Getting Started
 
@@ -129,6 +119,23 @@ Create a production build:
 npm run build
 ```
 
+## Features
+
+-   User registration and login
+-   JWT-based authentication
+-   Protected routes
+-   User profile management
+-   Add pet listings
+-   Browse pet listings
+-   View individual pet details
+-   Pet adoption listings
+-   Pet sale listings
+-   Image uploads through Cloudinary
+-   Manage personal pet listings
+-   Delete pet listings
+-   Responsive user interface
+-   Loading, empty, and error states
+-   Toast notifications and animated interactions
 
 
 ## Pet Listings
