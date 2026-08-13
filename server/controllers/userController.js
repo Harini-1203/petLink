@@ -59,7 +59,7 @@ const loginUser=asyncHandler( async (req,res)=>{
             process.env.ACCESS_TOKEN_SECRET,
             {expiresIn:"7d"}
         );
-        res.status(200).json({username,accestoken})
+        res.status(200).json({email,accestoken})
     }
     else{
         res.status(400).json({"message":"invalid username or password"});  
